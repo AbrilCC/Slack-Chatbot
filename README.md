@@ -44,14 +44,16 @@ chmod -x run.sh
 ./run.sh
 ```
 
-3. Log in to ngrok and create a domain to start a tunnel (you can reuse an existing ngrok domain if you already have one)
+3. Create an .env file following the .env_example.
 
-4. Use ngrok in a new terminal to expose your local server:
+4. Log in to ngrok and create a domain to start a tunnel (you can reuse an existing ngrok domain if you already have one)
+
+5. Use ngrok in a new terminal to expose your local server:
 ```
 ngrok http 8000 --url=<YOUR_NGROK_URL>
 ```
 
-5. Copy the generated public URL and configure it in your Slack App:
+6. Copy the generated public URL and configure it in your Slack App:
 
 Slack App → Event Subscriptions → Request URL → <YOUR_NGROK_URL>/events/
 
