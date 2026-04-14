@@ -3,3 +3,7 @@ djangorestframework
 slack_sdk
 slackeventsapi
 python-dotenv
+pandas
+matplotlib
+seaborn
+requests

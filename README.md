@@ -44,13 +44,13 @@ chmod -x run.sh
 ./run.sh
 ```
 
-3. Create an .env file following the .env_example.
+3. Create an .env file following the .env_example. You'll need to create your own Slack App at https://api.slack.com/apps/; in Features → OAuth & Permissions → Scope, add bot token scopes for your bot to be able to write and read from the channels you add it to. In OAuth Tokens, click Install to <your Slack Project> to get the Authentication and Verification Tokens needed for the .env.
 
 4. Log in to ngrok and create a domain to start a tunnel (you can reuse an existing ngrok domain if you already have one)
 
-5. Use ngrok in a new terminal to expose your local server:
+5. Use ngrok in a new terminal to expose your local server. From slackbot/ngrok run:
 ```
-ngrok http 8000 --url=<YOUR_NGROK_URL>
+./ngrok http 8000 --url=<YOUR_NGROK_URL>
 ```
 
 6. Copy the generated public URL and configure it in your Slack App:
