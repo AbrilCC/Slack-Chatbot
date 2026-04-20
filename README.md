@@ -65,8 +65,9 @@ https://xxxx.ngrok.io/slack/events/
 Make sure ngrok is running so Slack can reach your local backend.
 
 7. The .csv file used is found on data/, use this code as a template for your desired .csv data files, changing the names of the columns on slackbot/events/utils.py. You can call it by messaging it
-```@bot analyze by industry
-   @bot analyze by age
-   @bot analyze by sex
+```
+@bot analyze by industry
+@bot analyze by age
+@bot analyze by sex
 ```
 and attaching the .csv file to the message.
