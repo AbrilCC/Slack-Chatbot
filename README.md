@@ -1,14 +1,14 @@
-# Slack Greeting Bot – Slack Events API + Django
+# Slack Data Analysis Bot – Slack Events API + Django
 
 A Slack bot built with Django and the Slack Events API.  
-The bot listens to events from Slack and responds when a user greets it.
+The bot listens to events from Slack and responds when a user greets it. When sent an .csv file, it can analyze it by your chosen metrics.
 The application runs a Django backend that receives events from Slack through the Events API.  
 Since the backend runs locally during development, ngrok is used to expose the local server to the internet.
 
 Users can:
 * Mention the bot in a channel
-* Send greeting messages
-* Receive automated responses from the bot
+* Send greeting messages and receive automated responses from the bot
+* Send a .csv file and get an get a data analysis
 
 ## Requirements
 * Python >= 3.11	
@@ -63,3 +63,10 @@ https://xxxx.ngrok.io/slack/events/
 ```
 
 Make sure ngrok is running so Slack can reach your local backend.
+
+7. The .csv file used is found on data/, use this code as a template for your desired .csv data files, changing the names of the columns on slackbot/events/utils.py. You can call it by messaging it
+```@bot analyze by industry
+   @bot analyze by age
+   @bot analyze by sex
+```
+and attaching the .csv file to the message.
